@@ -1,8 +1,10 @@
 ---
+timestamp: 2012-12-09
 layout: bootcamp
 title: 'University of Edinburgh: Dec 04-05, 2012'
 venue: University of Edinburgh
 dates: Dec 04-05, 2012
+end: 2012-12-05
 ---
 **Where:** {{page.venue}}
 
