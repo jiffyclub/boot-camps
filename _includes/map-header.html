@@ -8,6 +8,13 @@
     return pin;
   }
 
+  function set_info_window(map, marker, info_window, content) {
+    google.maps.event.addListener(marker, 'click', function () {
+      info_window.setContent(content);
+      info_window.open(map, marker);
+    })
+  }
+
   function initialize_map() {
     var mapOptions = {
       zoom: 1,
@@ -24,12 +31,14 @@
         new google.maps.Point(0, 0),
         new google.maps.Point(12, 35));
 
+    var info_window = new google.maps.InfoWindow({});
+
     var map = new google.maps.Map(document.getElementById('map_canvas'),
         mapOptions);
 
-{% for bootcamp in site.posts %}
+{% for bootcamp in site.posts reversed %}
   {% if bootcamp.latlng %}
-    new google.maps.Marker({
+    var marker = new google.maps.Marker({
         position: new google.maps.LatLng({{bootcamp.latlng}}),
         map: map,
         title: "{{bootcamp.title}}",
@@ -40,8 +49,17 @@
     {% endif %}
         shadow: pinShadow,
         });
+
+    var info_string = '<div id="info-window">' +
+        '<h4>{{bootcamp.title}}</h4>' +
+        '<p>Visit the ' +
+        '<a href="{{bootcamp.url | prepend: site.baseurl}}">' +
+        'boot camp page</a> for more info.</p>' +
+        '</div>';
+
+    set_info_window(map, marker, info_window, info_string);
   {% endif %}
-{% endfor %} 
+{% endfor %}
 
   }
 </script>
