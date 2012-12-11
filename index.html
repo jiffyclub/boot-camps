@@ -1,24 +1,62 @@
 ---
-layout: mapcal
 title: Boot Camps
 ---
-<div class="title"><h1>{{page.title}}</h1></div>
+{% include doctype.html %}
+<html>
+  <head>
+    {% include header.html %}
+    {% include map-header.html %}
+    <style>
+      #map_canvas  {
+        width: 75%;
+        height: 350px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+  </head>
 
-<div class="row-fluid">
-<div class="span10 offset1">
-<p>A boot camp is an in-person, example-driven workshop, typically two
-or three days long. A boot camp covers the core skills needed to be
-productive in a small research team: basic programming skills, version
-control, testing, using the shell, and relational databases.</p>
+  <body onload="initialize_map()">
+    <div class="container shadow">
 
-<p>Short tutorials alternate with hands-on practical exercises, and
-participants are encouraged both to help one another, and to try
-applying what they have learned to their own research problems during
-and between sessions. Participants usually work on their own computers
-(typically laptops), using either native software or a standard set of
-packages running in a virtual machine. This ensures that they have a
-working environment when the boot camp is done.</p>
+      {% include banner.html %}
+      {% include main-menu.html %}
 
-<p>Want to know more?  See our <a href="faq.html">FAQ</a>.</p>
-</div>
-</div>
+      <div class="row-fluid">
+        <div class="span10 offset1">
+          <div class="title"><h1>{{page.title}}</h1></div>
+
+          <p>A boot camp is an in-person, example-driven workshop, typically two
+          or three days long. A boot camp covers the core skills needed to be
+          productive in a small research team: basic programming skills, version
+          control, testing, using the shell, and relational databases.</p>
+
+          <p>Short tutorials alternate with hands-on practical exercises, and
+          participants are encouraged both to help one another, and to try
+          applying what they have learned to their own research problems during
+          and between sessions. Participants usually work on their own computers
+          (typically laptops), using either native software or a standard set of
+          packages running in a virtual machine. This ensures that they have a
+          working environment when the boot camp is done.</p>
+
+          <p>Want to know more?  See our <a href="faq.html">FAQ</a>.</p>
+
+          {% include posts-future.html %}
+
+          {% include map-body.html %}
+          {% include calendar-body.html %}
+
+          {% include posts-past.html %}
+        </div>
+      </div>
+
+      {% include disqus-span.html %}
+      {% include footer.html %}
+
+    </div>
+
+    {% include footer-javascript.html %}
+    {% include map-footer.html %}
+
+  </body>
+</html>
