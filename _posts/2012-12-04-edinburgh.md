@@ -4,6 +4,7 @@ title: 'University of Edinburgh: Dec 04-05, 2012'
 venue: University of Edinburgh
 dates: Dec 04-05, 2012
 days: 2
+latlng: 55.9453279,-3.1911838
 ---
 **Where:** {{page.venue}}
 

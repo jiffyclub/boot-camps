@@ -3,6 +3,8 @@ layout: bootcamp
 title: 'Macquarie University: Feb 07-08, 2013'
 venue: Macquarie University
 dates: Feb 07-08, 2013
+days: 2
+latlng: -33.773636,151.112005
 eventbrite_key: 4114901782
 ---
 **Where:** {{page.venue}}

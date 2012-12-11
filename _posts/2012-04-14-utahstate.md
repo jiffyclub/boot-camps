@@ -3,6 +3,8 @@ layout: bootcamp
 title: 'Utah State University: Apr 14-15, 2012'
 venue: Utah State University
 dates: Apr 14-15, 2012
+days: 2
+latlng: 41.7449488,-111.8042944
 ---
 Please download:
 

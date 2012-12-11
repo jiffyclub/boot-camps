@@ -3,6 +3,8 @@ layout: bootcamp
 title: 'Newcastle University: May 14-15, 2012'
 venue: Newcastle University
 dates: May 14-15, 2012
+days: 2
+latlng: 54.980095,-1.6146142
 ---
 **This course is now fully booked and has a long waiting list. If you would like to be informed of similar events in the future, please e-mail us on [swc2012@ncl.ac.uk](mailto:swc2012@ncl.ac.uk).**
 

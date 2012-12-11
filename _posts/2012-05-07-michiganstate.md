@@ -3,6 +3,8 @@ layout: bootcamp
 title: 'Michigan State University: May 07-08, 2012'
 venue: Michigan State University
 dates: May 07-08, 2012
+days: 2
+latlng: 42.7272884,-84.482106
 ---
 **Database file**: [experiments.db](http://software-carpentry.org/experiments.db)
 
